@@ -33,10 +33,10 @@ document.addEventListener("DOMContentLoaded", function () {
       pseudoTooltip.style.border = "1px solid red";
     }
 
-    let phone = document.getElementById("phone");
-    let phoneTooltip = document
-      .getElementById("phone")
-      .parentElement.querySelector(".tooltip");
+    // let phone = document.getElementById("phone");
+    // let phoneTooltip = document
+    //   .getElementById("phone")
+    //   .parentElement.querySelector(".tooltip");
 
     let password = document.getElementById("password").value;
     let passwordConfirm = document.getElementById("passwordConfirm").value;
