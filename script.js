@@ -18,12 +18,17 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
 
-    let passwordInput = document.getElementById("password").value;
-    let passwordConfirmInput = document.getElementById("passwordConfirm").value;
+    let phone = document.getElementById("phone");
+    let phoneTooltip = document
+      .getElementById("phone")
+      .parentElement.querySelector(".tooltip");
+
+    let password = document.getElementById("password").value;
+    let passwordConfirm = document.getElementById("passwordConfirm").value;
     let passwordTooltip = document
       .getElementById("passwordConfirm")
       .parentElement.querySelector(".tooltip");
-    if (passwordInput !== passwordConfirmInput) {
+    if (password !== passwordConfirm) {
       isValid = false;
       passwordTooltip.style.display = "block";
       passwordTooltip.style.visibility = "visible";
