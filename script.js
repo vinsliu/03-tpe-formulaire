@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
     e.preventDefault();
     let inputs = form.querySelectorAll("input");
     let tooltips = form.querySelectorAll(".tooltip");
-    tooltips.forEach((tooltop) => (tooltips.textCont = ""));
+    tooltips.forEach((tooltip) => (tooltips.textCont = ""));
     let isValid = true;
     inputs.forEach((input) => {
       let tooltip = input.parentElement.querySelector(".tooltip");
@@ -17,6 +17,20 @@ document.addEventListener("DOMContentLoaded", function () {
         tooltip.style.border = "1px solid red";
       }
     });
+
+    let passwordInput = document.getElementById("password").value;
+    let passwordConfirmInput = document.getElementById("passwordConfirm").value;
+    let passwordTooltip = document
+      .getElementById("passwordConfirm")
+      .parentElement.querySelector(".tooltip");
+    if (passwordInput !== passwordConfirmInput) {
+      isValid = false;
+      passwordTooltip.style.display = "block";
+      passwordTooltip.style.visibility = "visible";
+      passwordTooltip.textContent = "Les mots de passe ne correspondent pas";
+      passwordTooltip.style.color = "red";
+      passwordTooltip.style.border = "1px solid red";
+    }
 
     if (isValid) {
       form.submit();
