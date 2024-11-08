@@ -69,18 +69,15 @@ h2 {
   position: relative;
   display: inline-block;
 }
-.tooltip {
-  visibility: visible;
-  background-color: #fff;
+#form .tooltip {
+  display: none;
+  visibility: hidden;
   border: 1px solid #000;
   border-radius: 5px;
-  text-align: center;
   padding: 0.5rem;
-  position: absolute;
-  top: -40px;
-  left: 50%;
-  white-space: nowrap;
-  opacity: 1;
+  margin: 0.2rem;
+  background-color: #fff;
+  text-align: center;
 }
 footer {
   background-color: cornflowerblue;
